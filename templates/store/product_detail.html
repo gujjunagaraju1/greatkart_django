@@ -6,10 +6,20 @@
 		<aside class="col-md-6">
 <article class="gallery-wrap"> 
 	<div class="img-big-wrap">
-	   <a href="#"><img src="{{single_product.image.url}}"></a>
+		<div class="img-big-wrap-mainImage">
+	   <img src="{{single_product.image.url}}">
+		</div>
 	</div> <!-- img-big-wrap.// -->
 	
-</article> <!-- gallery-wrap .end// -->
+</article>
+<ul class="thumb">
+	<li>
+		{% for image in product_gallery%}
+		<a href="{{image.image.url}}" target="mainImage"><img src="{{image.image.url}}" alt="product Image"></a>
+	</li>
+	{%endfor%}
+</ul>
+ <!-- gallery-wrap .end// -->
 		</aside>
 		<main class="col-md-6 border-left">
 

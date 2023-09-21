@@ -11,6 +11,10 @@ urlpatterns = [
       path('',views.dashboard,name="dashboard"),
       path('forgetPassword/',views.forgetPassword,name="forgetPassword"),
       path('restPassword/',views.restPassword,name="restPassword"),
+      path('my_orders/',views.my_orders,name="my_orders"),
+      path('edit_profile/',views.edit_profile,name="edit_profile"),
+      path('changePassword/',views.changePassword,name="changePassword"),
+      path('order_detail/<int:order_id>/',views.order_detail,name="order_detail")
     
    
    
